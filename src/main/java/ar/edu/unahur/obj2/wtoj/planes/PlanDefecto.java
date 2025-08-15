@@ -8,6 +8,4 @@ public class PlanDefecto implements PlanSuscribible{
     public Double costoPlan(Usuario usuario) {
         return 0.0;
     }
-    
-
 }

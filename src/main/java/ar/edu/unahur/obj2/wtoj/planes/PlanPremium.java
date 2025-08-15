@@ -13,6 +13,5 @@ public class PlanPremium implements PlanSuscribible{
     public Double costoPlan(Usuario usuario) {
         return costoPlan;
     }
-
     
 }

@@ -17,12 +17,12 @@ public class PlanBasico implements PlanSuscribible{
     @Override
     public Double costoPlan(Usuario usuario) {
         List<Contenido> contenidoUsuario = usuario.getContenidos();
-        List<Contenido> excedentes = contenidoUsuario.subList(limite,contenidoUsuario.size()); // [) incluye el primero y no el último
         
         if (limite >= contenidoUsuario.size()) {
             return costoBase;
         } else {
-            return costoBase + (excedentes.stream().mapToDouble(c -> c.costo()).sum());
+            List<Contenido> excedentes = contenidoUsuario.subList(limite,contenidoUsuario.size()); // [) incluye el primero y no el último
+            return costoBase + (excedentes.stream().mapToDouble(c -> c.getCostoBase()).sum());
         }
     }
 }

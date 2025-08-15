@@ -42,6 +42,4 @@ public class Usuario {
     public void setContenidos(List<Contenido> contenidos) {
         this.contenidos = contenidos;
     }
-
-    
 }
